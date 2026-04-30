@@ -4235,6 +4235,14 @@ curl -L -X POST 'https://manga.bilibili.com/twirp/comic.v1.Comic/ComicDetail?dev
 | 参数名 | 类型 | 内容    | 必要性 | 备注 |
 | ------ | ---- | ------- | ------ | ---- |
 | csrf   | str  | CSRF令牌 | 非必要 |      |
+| device | str  | 设备类型 | 非必要 | pc |
+| platform | str | 平台类型 | 非必要 | web |
+
+**正文参数（ application/json ）：**
+
+| 参数名 | 类型 | 内容 | 必要性 | 备注 |
+| ------ | ---- | ---- | ------ | ---- |
+| type | num | 类型 | 非必要 | 0：首页热门 |
 
 **json回复：**
 
@@ -4338,6 +4346,21 @@ curl -L -X POST 'https://manga.bilibili.com/twirp/comic.v1.Comic/ComicDetail?dev
 | 参数名 | 类型 | 内容    | 必要性 | 备注 |
 | ------ | ---- | ------- | ------ | ---- |
 | csrf   | str  | CSRF令牌 | 非必要 |      |
+| device | str  | 设备类型 | 非必要 | pc |
+| platform | str | 平台类型 | 非必要 | web |
+
+**正文参数（ application/json ）：**
+
+| 参数名 | 类型 | 内容 | 必要性 | 备注 |
+| ------ | ---- | ---- | ------ | ---- |
+| JsonData | str | JSON字符串 | 必要 | 包含请求配置的JSON字符串 |
+
+`JsonData`解析后的对象：
+
+| 字段名 | 类型 | 内容 | 备注 |
+| ------ | ---- | ---- | ---- |
+| pool_id | num | 推荐池id | |
+| num | num | 返回数量 | |
 
 **json回复：**
 
